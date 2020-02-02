@@ -5,11 +5,11 @@ CREATE DATABASE trippin_db;
 \c trippin_db;
 
 DROP TABLE IF EXISTS users;
--- DROP TABLE IF EXISTS posts;
--- DROP TABLE IF EXISTS comments;
--- DROP TABLE IF EXISTS likes;
--- DROP TABLE IF EXISTS albums;
--- DROP TABLE IF EXISTS pictures;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS likes;
+DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS pictures;
 
 CREATE TABLE users
 (
@@ -26,8 +26,7 @@ CREATE TABLE posts
 (
     id SERIAL PRIMARY KEY,
     poster_id INT REFERENCES users(id) ON DELETE CASCADE,
-    image text,
-    caption TEXT
+    body TEXT
 );
 
 CREATE TABLE comments
@@ -68,32 +67,32 @@ VALUES
 ('Sports_fiend','Stadium12','Vince', 'Campbell',40,'../../avatars/6.eps'),
 ('Griph','Karma12','Geoff','Ramsey',43,'../../avatars/7.eps');
 
--- INSERT INTO post
--- (poster_id,image,caption)
--- VALUES
--- (1,),
--- (2,),
--- (3,),
--- (4,),
--- (5,);
+INSERT INTO posts
+(poster_id,body)
+VALUES
+(1,'This is the begining of a great day.' ),
+(2,'Momentos Ive kept throughout the years'),
+(3,'The most meaningful thing Ive ever done'),
+(4,'See if you can pick out the person who fell right after'),
+(5,'Bet you cant guess where this is');
 
--- INSERT INTO comments
--- (commenter_id,posts_id,body)
--- VALUES
--- -- (1,1,'Nice'),
--- (2,2,'I like that.'),
--- (3,3,'This is great'),
--- (4,4,'I remember this'),
--- (5,5,'Wish I was there');
+INSERT INTO comments
+(commenter_id,posts_id,body)
+VALUES
+(1,1,'Nice'),
+(2,2,'I like that.'),
+(3,3,'This is great'),
+(4,4,'I remember this'),
+(5,5,'Wish I was there');
 
--- INSERT INTO likes
--- (liker_id,posts_id)
--- VALUES
--- (1,1),
--- (1,3),
--- (3,1),
--- (4,2),
--- (5,1);
+INSERT INTO likes
+(liker_id,posts_id)
+VALUES
+(1,1),
+(1,3),
+(3,1),
+(4,2),
+(5,1);
 
 INSERT INTO albums
 (creator_id, album_title)
@@ -104,13 +103,13 @@ VALUES
 (4, 'Friends'),
 (5, 'Vacation');
 
--- INSERT INTO pictures
--- (album_id, photo_url)
--- VALUES
--- (1,'../../pictures/'),
--- (2,),
--- (3,),
--- (4,),
--- (5,);
+INSERT INTO pictures
+(album_id, photo_url)
+VALUES
+(1,'../../pictures/architecture-building-business-cinema-436413.jpg'),
+(2,'../../pictures/photos-in-the-wooden-box-5841.jpg'),
+(3,'../../pictures/greayscale-photo-of-baby-feet-with-father-and-mother-hands-in-733881.jpg'),
+(4,'../../pictures/people-silhouette-during-sunset-853168.jpg'),
+(5,'../../pictures/cottages-in-the-middle-of-beach-753626.jpg');
 
 
