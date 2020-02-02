@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "album-1 album-2 album-3 album-4" "album-5 album6 album-7 album-8" ". . . .";
+  }
+  
+  .album-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . ." ". . .";
+    grid-area: album-1;
+  }
+  
+  .album-2 { grid-area: album-2; }
+  
+  .album-3 { grid-area: album-3; }
+  
+  .album-4 { grid-area: album-4; }
+  
+  .album-5 { grid-area: album-5; }
+  
+  .album6 { grid-area: album6; }
+  
+  .album-7 { grid-area: album-7; }
+  
+  .album-8 { grid-area: album-8; }
