@@ -1,3 +1,54 @@
+#logo_tripp {
+    position: relative;
+    background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px #f5f5f5;
+    font-size: 60px;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+    text-align: left;
+  }
+
+  #logo_in{
+    position: absolute;
+    margin: 0px;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 48px;
+    color: #0af176;
+    -webkit-transform: rotate(-15deg);
+    margin-left: 150px;
+    margin-top: -50px;
+    -webkit-text-stroke: 1px #0af176;
+    z-index: 20;
+  }
+
+  #profile{
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      height: 150px;
+      width: 150px;
+      background: url("../homepage/pictures/46874833_1120839111404947_1568038783788754325_n.jpg") no-repeat;
+      background-size: 100%;
+      background-size: 150px auto;
+  }
+#photo_container{
+
+    
+}
+
+#search_container{
+
+}
+
+#post_button{
+
+}
+  
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
