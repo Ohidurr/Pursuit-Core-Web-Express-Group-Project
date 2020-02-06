@@ -19,7 +19,6 @@ CREATE TABLE users
     firstname TEXT,
     lastname TEXT,
     age INT,
-fix_Schema
     profile_pic TEXT
 
 );
@@ -73,9 +72,7 @@ VALUES
 ('Griph','Karma12','Geoff','Ramsey',43,'../../avatars/7.eps');
 
 INSERT INTO albums
-queries
 (creator_id,title)
-
 VALUES
 (1,'Movies'),
 (2, 'Memories'),
@@ -89,7 +86,6 @@ VALUES
 (1,'../../pictures/photos-in-the-wooden-box-5841.jpg'),
 (2,'../../pictures/greayscale-photo-of-baby-feet-with-father-and-mother-hands-in-733881.jpg'),
 (2,'../../pictures/people-silhouette-during-sunset-853168.jpg'),
- fix_Schema
 (2,'../../pictures/cottages-in-the-middle-of-beach-753626.jpg'),
 (3,'https://specials-images.forbesimg.com/imageserve/5e378fb0a854780006b049a0/960x0.jpg?fit=scale'),
 (3,'https://ca-times.brightspotcdn.com/dims4/default/537da86/2147483647/strip/true/crop/4174x2782+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4a%2Fe6%2F9a32968d4c93a3e33c7a571318ed%2F49ers-chiefs-super-bowl-football-90882.jpg');
