@@ -64,11 +64,11 @@ const deletePost = async (req, res, next) => {
       })
    }
 }
-
 //get all comments from an album
 const getAllCommentsByPost = async (req, res, next) => {
+   console.log(req.params.id)
    try {
-      let comments = await db.one("SELECT u.username, c.body Remarks FROM users u JOIN comments c ON c.commenter_id = u.id JOIN posts p ON p.id = c.posts_id WHERE p.id = $1", req.params.id)
+      let comments = await db.any('SELECT u.username, c.body Remarks FROM users u JOIN comments c ON c.commenter_id = u.id JOIN posts p ON p.id = c.posts_id WHERE p.id = $1', req.params.id)
       res.status(200).json({
          status: "Success",
          message: "We receive all comments",
