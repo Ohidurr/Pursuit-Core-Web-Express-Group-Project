@@ -1,22 +1,18 @@
 const posts = require("express").Router();
 
-const { getPosts, getPost, createPost, deletePost } = require("../../queries/posts");
+const { getPosts, getPost, createPost, deletePost, getAllCommentsByPost } = require("../../queries/posts");
 
-const postsCommentsRouter = require("../posts/comments/comments")
 
-posts.use("/:id", postsCommentsRouter);
+//http://localhost:3000/posts/posts/comments/1
+posts.get("/comments/:id", getAllCommentsByPost)
 
-// const postsLikesRouter = require("./likes/likes")
-
-// posts.use("/:id", postsLikesRouter);
-
+//http://localhost:3000/posts/home
 posts.get("/home", getPosts);
 
+//http://localhost:3000/posts/1 == error
 posts.get("/:id", getPost);
 
 posts.post("/", createPost);
-
-// posts.patch("/:id", updatePost)
 
 posts.delete("/", deletePost)
 
