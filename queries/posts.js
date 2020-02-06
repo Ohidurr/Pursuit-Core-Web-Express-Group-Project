@@ -19,7 +19,7 @@ const getPosts = async (req, res, next) => {
 //get an album from a feed
 const getPost = async (req, res, next) => {
    try {
-      let post = await db.one("SELECT DISTINCT u.username, a.title, a.creator_id, p.body description, c.body note, c.commenter_id, COUNT (l.posts_id) total_likes, ARRAY_AGG (pic.photo_url) AS pics FROM users u JOIN posts p ON p.poster_id = u.id JOIN albums a ON a.creator_id = u.id JOIN pictures pic ON pic.album_id = a.id JOIN comments c ON c.posts_id = p.id JOIN likes l ON l.posts_id = p.id GROUP BY a.id, a.title, u.username, p.body, c.body, p.id, c.commenter_id HAVING p.id = $1 ORDER BY c.commenter_id ASC", req.params.id)
+      let post = await db.one("SELECT u.username, a.title, posts.body, ARRAY_AGG (pictures.photo_url) AS pics FROM albums a JOIN pictures ON pictures.album_id = a.id JOIN users u ON u.id = a.creator_id JOIN posts ON posts.album_id = a.id GROUP BY a.id, a.title, u.username, posts.body HAVING a.id = (SELECT p.album_id FROM posts p JOIN albums ON albums.id = p.album_id WHERE p.id = $1)", req.params.id)
       res.status(200).json({
             status: "Success",
             message: "Retrieve an album",
