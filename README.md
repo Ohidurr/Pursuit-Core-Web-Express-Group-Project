@@ -19,7 +19,7 @@ The master branch should be the most current version of the project.  Whenever y
 
 ### Trello
 
-Each group member should have an account on [Trello](https://trello.com/) and the group should have a well maintained list of who is working on what task.  Without this, two people might try to edit the same file and create merge conflicts.
+Each group member should have an account on [Trello](https://trello.com/) and the group should have a well maintained list of who is working on what task.  Without this, two people might try to edit the same file and create merge conflicts!
 
 [Example](https://trello.com/b/DnZvFigA/agile-board)
 
