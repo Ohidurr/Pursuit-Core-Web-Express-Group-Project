@@ -1,18 +1,17 @@
 const db = require("../DATABASE/index.js");
 
 const createComment = async (req, res, next) => {
-   let comment = req.body.body
    try {
-      await db.none("INSERT INTO comments (commenter_id, posts_id, body) VALUES (${commenter_id}, ${posts_id}, ${body})", req.body)
-      res.status(200).json({
+      let comment = await db.none("INSERT INTO comments (commenter_id, posts_id, body) VALUES (${commenter_id}, ${posts_id}, ${body})", req.body)
+      res.status(201).json({
          status: "Success",
          message: "You successfully added a comment",
          body: comment
       })
    } catch (err) {
-      res.json({
-         status: "Failed",
-         message: err
+      res.status(406).json({
+         status: "Failed, not acceptable",
+         message: `${err} is found at createComment`
       })
    }
 }
@@ -25,11 +24,10 @@ const deleteComment = async (req, res, next) => {
          message: 'Comment is now deleted'
       })
    } catch (err) {
-      res.json({
-         status: "Failed",
-         message: err
+      res.status(404).json({
+         status: "Failed, not found",
+         message: `${err} is found at deleteComment query`
       })
    }
 }
-
 module.exports = { createComment, deleteComment }
