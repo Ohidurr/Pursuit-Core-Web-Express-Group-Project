@@ -4,11 +4,12 @@ With your group, build an app that has the basic functionality of a social media
 
 ## Groupwork
 
-This is our first large group project.  There are three large things to be aware of for group projects:
+This is our first large group project.  There are four large things to be aware of for group projects:
 
 1. Git
 2. Trello
 3. Group Roles
+4. Communication
 
 ### Git
 
