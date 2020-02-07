@@ -1,6 +1,6 @@
 # Pursuit-Core-Web-Express-Group-Project
 
-With your group, build an app that has the basic functionality of a social media website.
+With your group, build an app that has the basic functionality of a social media website!
 
 ## Groupwork
 
