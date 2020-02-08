@@ -1,15 +1,14 @@
 body{
   background:#0C748B;
-  sc
 }
 
-h4, p{
+h3, p{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h4{
+h3{
   margin-top: 2%;
   font-size: 25px;
 }
