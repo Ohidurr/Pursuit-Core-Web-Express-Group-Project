@@ -11,16 +11,16 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-async function singleAlbum (id) {
-  let album = document.querySelector("img")
-  try {
-    let res = await axios.get(`http://localhost:3000/posts/:${id}`)
-    debugger
-  } catch (err) {
-    err
-  }
+// async function singleAlbum (id) {
+//   let album = document.querySelector("img")
+//   try {
+//     let res = await axios.get(`http://localhost:3000/posts/:${id}`)
+//     debugger
+//   } catch (err) {
+//     err
+//   }
   
-}
+// }
 
 function showSlides(n) {
   let i;
