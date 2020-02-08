@@ -2,8 +2,6 @@ const posts = require("express").Router();
 
 const { getPosts, getPost, createPost, deletePost, getAllCommentsByPost } = require("../../queries/posts");
 
-fix_Schema
-
 //http://localhost:3000/posts/comments/1
 
 posts.get("/comments/:id", getAllCommentsByPost)
