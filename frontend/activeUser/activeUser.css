@@ -29,11 +29,16 @@ h4{
   height: 20px;
 }
 
+#container {
+  display: flex;
+  justify-content: space-around;
+}
+
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 180px;
+  width: 250px;
 }
 
 div.gallery:hover {
@@ -64,6 +69,7 @@ div.desc {
 }
 
 .responsive {
+  margin-right: 10px;
   padding: 0 6px;
   float: left;
   width: 24.99999%;

@@ -1,14 +1,15 @@
 # Pursuit-Core-Web-Express-Group-Project
 
-With your group, build an app that has the basic functionality of a social media website.
+With your group, build an app that has the basic functionality of a social media website!
 
 ## Groupwork
 
-This is our first large group project.  There are three large things to be aware of for group projects:
+This is our first large group project.  There are four large things to be aware of for group projects:
 
 1. Git
 2. Trello
 3. Group Roles
+4. Communication
 
 ### Git
 
@@ -19,7 +20,7 @@ The master branch should be the most current version of the project.  Whenever y
 
 ### Trello
 
-Each group member should have an account on [Trello](https://trello.com/) and the group should have a well maintained list of who is working on what task.  Without this, two people might try to edit the same file and create merge conflicts.
+Each group member should have an account on [Trello](https://trello.com/) and the group should have a well maintained list of who is working on what task.  Without this, two people might try to edit the same file and create merge conflicts!
 
 [Example](https://trello.com/b/DnZvFigA/agile-board)
 
