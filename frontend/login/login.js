@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
   let loginButton = document.querySelector("#logInBtn");
   let loginForm = document.querySelector("#loginForm");
-  loginButton.addEventListener("click", userCheck);
+  loginButton.addEventListener("submit", userCheck);
 })
 
 const noUser = () => {
@@ -13,5 +13,18 @@ const noUser = () => {
 const userCheck = async () => {
   const userName = document.querySelector("#userLoginInput").value;
   const password = document.querySelector("#loginPasswordInput").value;
-  const res = await axios.get("http://")
+  const res = await axios.get("http://localhost:3000/users/")
+  let users = res.data.body
+  for (let user of users) {
+    if (username === user.username) {
+        if (password === user.password) {
+            return userFound()
+        }
+    }
+}
+return noUser()
+}
+
+const userFound = async () => {
+  window.location.href = "../singleUserProfile/singleUserProfile.html"
 }
