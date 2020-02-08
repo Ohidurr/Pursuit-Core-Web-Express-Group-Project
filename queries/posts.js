@@ -3,7 +3,7 @@ const db = require("../DATABASE/index.js");
 //see all albums from all users on home page
 const getPosts = async (req, res, next) => {
    try {
-      let posts = await db.any("SELECT u.username, a.title, p.body, ARRAY_AGG (pic.photo_url) FROM users u JOIN albums a ON a.creator_id = u.id JOIN pictures pic ON pic.album_id = a.id JOIN posts p ON p.album_id = a.id GROUP BY a.title, u.username, p.body");
+      let posts = await db.any("SELECT u.username, a.id, a.title, p.body, ARRAY_AGG (pic.photo_url) FROM users u JOIN albums a ON a.creator_id = u.id JOIN pictures pic ON pic.album_id = a.id JOIN posts p ON p.album_id = a.id GROUP BY a.id, a.title, u.username, p.body");
       res.status(200).json({
          status: "Success",
          message: "Pull all posts",
