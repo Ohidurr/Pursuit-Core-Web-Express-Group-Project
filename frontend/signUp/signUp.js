@@ -1,24 +1,41 @@
 document.addEventListener("DOMContentLoaded",() =>{
 
-    let firstName = document.querySelector("#firstNameInput")
-    let lastName = document.querySelector("#lastNameInput")
-    let userName = document.querySelector("#userNameInput")
-    let password = document.querySelector("#signUpPasswordInput")
-    let userAge = document.querySelector("#userAge")
-    let signUpbtn = document.querySelector("#sigUpBtn")
+    let firstName = document.querySelector("#firstNameInput").value;
+    let lastName = document.querySelector("#lastNameInput").value;
+    let userName = document.querySelector("#userNameInput").value;
+    let password = document.querySelector("#signUpPasswordInput").value;
+    let userAge = document.querySelector("#userAge").value
+    // let signUpbtn = document.querySelector("#sigUpBtn")
     let signUpForm = document.querySelector("#signUpForm")
     let genders = document.querySelector("#genders")
+    // const createUser = (firstName,lastName,userName,password,userAge) => {
+    //     await axios.post('http://localhost:3000/users', {
+    //         firstName: firstName,
+    //         lastName: lastName,
+    //         userName: userName,
+    //         password: password,
+    //         userAge: userAge
+
+    //     }
+    // })
 
     signUpForm.addEventListener('submit', async(e) => {
         e.preventDefault()
-        // firstName.value 
-        // lastName.value
-        // userName.value
-        // password.value
-        // userAge.value 
-    await axios.post("http://localhost:3000/users", {firstName:firstName.value},{lastName:lastName.value},{userName:userName.value},{password:password.value},{userAge:userAge.value})
-    debugger
+       
+   
+           let res = await axios.post('http://localhost:3000/users', {
+                firstname: firstName,
+                lastname: lastName,
+                username: userName,
+                password: password,
+                userage: +userAge
+                
+            })
+                console.log(JSON.stringify(res.data.message));
+                debugger
+        
 
+        
+     
     })
-    debugger
 })
